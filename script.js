@@ -5,24 +5,7 @@ function compute()
     y = document.getElementById("years").value;
     result = document.getElementById("result");
     
-    function num() {
-        var v=document.getElementById("principal").value;
-        if(v<=0)
-        {
-            alert('value should be a positive number')
-        }
-    }
     
-   
-function sliderChange(val) {
-document.getElementById('slider').value;
-}
-
-    
-    var dateobj = new Date();
-    var B = dateobj.getFullYear();
-    year = B+=y;
-
                
     var interest = (p*r*y)/100;
 
