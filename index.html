@@ -1,38 +1,47 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html> <!--The beginning of HTML document -->
+<html lang="en"> <!--Document language-->
 <head>
-    <title>Web App – Simple Interest Calculator</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">          <!--Link to file .css-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <script src="script.js"></script>                                 <!--Link to file .js-->
+  <title>WebApp-Simple Interest Calculator</title> <!--Web page name-->
 </head>
-
-<body>
+  <body>
     <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number" id="principal"> <br />
-        Rate <input type="range" id="rate" onchange="updateRate()" min="1" max="20" step="0.25" value="10.25"> <span id="rate_val">
-            10.25%
-        </span> <br />
-        No. of Years <select id="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select> <br />
-        <button onclick="compute()">Compute Interest</button><br>
-        <span id="result"></span><br>
-        <footer>
-            &#169; This Calculator belongs to Pallavi
-        </footer>   
+      <h1>Simple Interest Calculator</h1> <!--App name-->
+        <h3>
+          <p><label for ="Amount">Amount</label> 
+            <input  class="number" type="number" id="principal" name="number" onchange="validateAmount()"> <!--The number of money invested-->
+          </p>
+        </h3>
+      <form>
+        <label for="Interest Rate">Interest Rate</label>
+        <input type="range" class="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="getSliderValue()">
+        <span id="rate_val"> 10.25 </span>%   <!--Interest rate-->
+      </form>
+          <h3>
+            <p> No. of Years
+              <select class="years" name ="years" id="years"> <!--Saving money-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>  <!--From 1 to 10 years-->
+              </select>
+            </p>
+          </h3>            
+            <p>
+              <input  type="button" onclick="compute()"  class="button" value="Compute Interest"> <!--Button-->
+            </p>
+          <h3>
+            <p class="result" id="result"></p> <!-- Display output calculation-->
+          </h3>
+      <div class="footer">&#169 This Calculator belongs to Pallavi</div> <!--Developer of application-->
     </div>
-</body>
-
+  </body> 
 </html>
